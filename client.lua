@@ -9,8 +9,9 @@ Citizen.CreateThread(function()
     end
 end)
 
+-- Function to create blip
 local function createBlip(info)
-    local blip = AddBlipForCoord(info.x, info.y, info.z)
+    local blip = AddBlipForCoord(info.coords.x, info.coords.y, info.coords.z)
     SetBlipSprite(blip, info.sprite)
     SetBlipDisplay(blip, 4)
     SetBlipScale(blip, info.scale)
@@ -22,6 +23,7 @@ local function createBlip(info)
     return blip
 end
 
+-- Function to update blip visibility and color based on duty status
 local function updateBlip(jobname)
     local onDuty = jobDutyStatus[jobname] or false
     for _, info in pairs(Config.Blips) do
@@ -46,6 +48,7 @@ local function updateBlip(jobname)
     end
 end
 
+-- Event handler for duty status updates
 RegisterNetEvent('QBCore:Client:OnJobUpdate')
 AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
     if JobInfo.onduty then
@@ -56,9 +59,11 @@ AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
     updateBlip(JobInfo.name)
 end)
 
+-- Event handler for resource start
 AddEventHandler('onResourceStart', function(resource)
     if GetCurrentResourceName() ~= resource then return end
     
+    -- Create blips for all jobs and set initial duty status
     for _, info in pairs(Config.Blips) do
         blips[info.jobname] = createBlip(info)
         if info.alwaysOn then
