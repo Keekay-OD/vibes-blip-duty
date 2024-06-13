@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Your Name'
-description 'Business Blips'
+author 'Keekay'
+description 'Business Duty Blips'
 version '1.0.0'
 
 client_scripts {
