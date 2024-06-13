@@ -9,7 +9,6 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Function to create blip
 local function createBlip(info)
     local blip = AddBlipForCoord(info.x, info.y, info.z)
     SetBlipSprite(blip, info.sprite)
@@ -23,7 +22,6 @@ local function createBlip(info)
     return blip
 end
 
--- Function to update blip visibility and color based on duty status
 local function updateBlip(jobname)
     local onDuty = jobDutyStatus[jobname] or false
     for _, info in pairs(Config.Blips) do
@@ -34,16 +32,13 @@ local function updateBlip(jobname)
                 end
                 SetBlipColour(blips[jobname], info.color)
             else
+                if not blips[jobname] then
+                    blips[jobname] = createBlip(info)
+                end
                 if onDuty then
-                    if not blips[jobname] then
-                        blips[jobname] = createBlip(info)
-                    end
                     SetBlipColour(blips[jobname], info.color)
                 else
-                    if blips[jobname] then
-                        RemoveBlip(blips[jobname])
-                        blips[jobname] = nil
-                    end
+                    SetBlipColour(blips[jobname], info.offDutyColor)
                 end
             end
             break
@@ -51,7 +46,6 @@ local function updateBlip(jobname)
     end
 end
 
--- Event handler for duty status updates
 RegisterNetEvent('QBCore:Client:OnJobUpdate')
 AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
     if JobInfo.onduty then
@@ -62,15 +56,16 @@ AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
     updateBlip(JobInfo.name)
 end)
 
--- Create initial blips for always-on jobs and set default duty status
-Citizen.CreateThread(function()
-    while QBCore == nil do
-        Citizen.Wait(100)
-    end
+AddEventHandler('onResourceStart', function(resource)
+    if GetCurrentResourceName() ~= resource then return end
+    
     for _, info in pairs(Config.Blips) do
+        blips[info.jobname] = createBlip(info)
         if info.alwaysOn then
-            blips[info.jobname] = createBlip(info)
+            SetBlipColour(blips[info.jobname], info.color)
+        else
+            jobDutyStatus[info.jobname] = false
+            SetBlipColour(blips[info.jobname], info.offDutyColor)
         end
-        jobDutyStatus[info.jobname] = false
     end
 end)

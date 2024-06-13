@@ -1,7 +1,5 @@
 Config = {}
 
-Config = {}
-
 Config.Blips = {
     {
         jobname = "beachgas",
@@ -13,246 +11,19 @@ Config.Blips = {
         y = -326.54656982421877,
         z = 17.05947875976562,
         alwaysOn = false,
-        offDutyColor = 85
+        offDutyColor = 40
     },
     {
         jobname = "puff_puff_pass",
         joblabel = "Puff Puff Pass",
-        sprite = 496,
+        sprite = 496, 
         color = 27,
         scale = 0.6,
         x = -1557.66943359375,
         y = -445.3951416015625,
-        z = 46.37003707885742,
+        z = 46.37003707840742,
         alwaysOn = false,
-        offDutyColor = 85
+        offDutyColor = 40 --Grey Blips
     },
-    {
-        jobname = "arriba",
-        joblabel = "Arriba Restaurant",
-        sprite = 76,
-        color = 27,
-        scale = 0.6,
-        x = 370.5882263183594,
-        y = -336.0099182128906,
-        z = 60.02328872680664,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "police",
-        joblabel = "Police Impound",
-        sprite = 560,
-        color = 4,
-        scale = 0.6,
-        x = -233.48646545410157,
-        y = -1367.6905517578126,
-        z = 35.56635284423828,
-        alwaysOn = true,
-        offDutyColor = 4
-    },
-    {
-        jobname = "yellowjack",
-        joblabel = "Yellow Jack",
-        sprite = 93,
-        color = 46,
-        scale = 0.6,
-        x = 1989.961669921875,
-        y = 3049.017822265625,
-        z = 53.54207992553711,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "davisgas",
-        joblabel = "Davis Bodega",
-        sprite = 361,
-        color = 27,
-        scale = 0.6,
-        x = -70.74446105957031,
-        y = -1761.7098388671876,
-        z = 34.85964584350586,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "medusa_nightclub",
-        joblabel = "Medusa Nightclub",
-        sprite = 121,
-        color = 1,
-        scale = 0.6,
-        x = 753.4785766601563,
-        y = -560.0952758789063,
-        z = 40.83353042602539,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "pawnshop",
-        joblabel = "Pawn Shop",
-        sprite = 431,
-        color = 5,
-        scale = 0.6,
-        x = 144.84637451171876,
-        y = -1723.53173828125,
-        z = 33.19759750366211,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "burgershot",
-        joblabel = "Burger Shot",
-        sprite = 106,
-        color = 81,
-        scale = 0.6,
-        x = -1188.47265625,
-        y = -886.3336791992188,
-        z = 19.86165618896484,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "bean",
-        joblabel = "Bean Machine",
-        sprite = 78,
-        color = 21,
-        scale = 0.6,
-        x = -623.9751586914063,
-        y = 222.6676025390625,
-        z = 90.87112426757813,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "snrbuns",
-        joblabel = "Snr Buns",
-        sprite = 120,
-        color = 5,
-        scale = 0.6,
-        x = -522.6842041015625,
-        y = -680.4638671875,
-        z = 42.32939910888672,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "gingerstreet_pawnshop",
-        joblabel = "Ginger Street Pawnshop",
-        sprite = 431,
-        color = 2,
-        scale = 0.7,
-        x = -772.9928588867188,
-        y = -603.3816528320313,
-        z = 95.19853210449219,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "mosley",
-        joblabel = "Mosley Autos",
-        sprite = 78,
-        color = 3,
-        scale = 0.6,
-        x = -42.65063095092773,
-        y = -1672.639892578125,
-        z = 36.49040985107422,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "hayes",
-        joblabel = "Tates Auto",
-        sprite = 446,
-        color = 27,
-        scale = 0.6,
-        x = -1428.37744140625,
-        y = -448.23095703125,
-        z = 39.21899032592773,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "uwu",
-        joblabel = "UWU Cafe",
-        sprite = 621,
-        color = 34,
-        scale = 0.6,
-        x = -578.3798828125,
-        y = -1068.0947265625,
-        z = 32.37758255004883,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "cash2",
-        joblabel = "Paycheck Center",
-        sprite = 431,
-        color = 2,
-        scale = 0.6,
-        x = 124.2559814453125,
-        y = -1349.7930908203126,
-        z = 34.68284606933594,
-        alwaysOn = true,
-        offDutyColor = 85
-    },
-    {
-        jobname = "last_train",
-        joblabel = "Last Train",
-        sprite = 77,
-        color = 1,
-        scale = 0.6,
-        x = -376.4281311035156,
-        y = 270.7614440917969,
-        z = 88.6191177368164,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "cookies",
-        joblabel = "Cookies",
-        sprite = 496,
-        color = 15,
-        scale = 0.6,
-        x = -941.01513671875,
-        y = -1181.1151123046876,
-        z = 11.77611637115478,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "laundry",
-        joblabel = "Laundry",
-        sprite = 270,
-        color = 3,
-        scale = 0.6,
-        x = 83.14547729492188,
-        y = -1553.331787109375,
-        z = 34.30180358886719,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "tequi-la-la",
-        joblabel = "Tequi-La-La",
-        sprite = 209,
-        color = 5,
-        scale = 0.6,
-        x = -561.4605102539063,
-        y = 283.7059020996094,
-        z = 90.7978057861328,
-        alwaysOn = false,
-        offDutyColor = 85
-    },
-    {
-        jobname = "gunshop",
-        joblabel = "Run N Gun",
-        sprite = 110,
-        color = 77,
-        scale = 0.8,
-        x = 1145.779052734375,
-        y = -448.7080993652344,
-        z = 75.37107849121094,
-        alwaysOn = false,
-        offDutyColor = 85
-    }
+
 }
