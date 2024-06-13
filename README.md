@@ -1,4 +1,4 @@
-# qbcore Vibes Blip Duty README
+# QBCore Vibes Blip Duty README
 
 This script allows you to toggle blips on and off when the player goes on duty in the qbcore framework.
 
