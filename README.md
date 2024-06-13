@@ -1,11 +1,11 @@
-# qbcore Toggle Blips README
+# qbcore Vibes Blip Duty README
 
 This script allows you to toggle blips on and off when the player goes on duty in the qbcore framework.
 
 ## Installation
 
 1. Make sure you have the qbcore framework installed in your FiveM server.
-2. Download the `vibes-blip-duty` resource from the [GitHub repository](https://github.com/your-repository-link).
+2. Download the `vibes-blip-duty` resource from the [GitHub repository](https://github.com/Keekay-OD/vibes-blip-duty).
 3. Place the `vibes-blip-duty` folder in the `resources` directory of your FiveM server.
 
 ## Usage
@@ -27,7 +27,7 @@ You can customize the behavior of the script by modifying the `config.lua` file 
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request on the [GitHub repository](https://github.com/your-repository-link).
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request on the [GitHub repository](https://github.com/Keekay-OD/vibes-blip-duty).
 
 ## License
 
